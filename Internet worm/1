@@ -1,0 +1,6 @@
+from urllib.request import urlopen
+
+h = urlopen('http://www.woshipm.com/pd/900844.html').read().decode('utf-8')
+print(h)
+
+#后续可用正则表达式来筛选信息，也可以用Beautifulsoup。
