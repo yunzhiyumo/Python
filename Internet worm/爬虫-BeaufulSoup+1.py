@@ -10,7 +10,12 @@ h = urlopen('http://www.woshipm.com/pd/900844.html').read().decode('utf-8')
 print(h)
 
 soup = BeautifulSoup(h,features='lxml')
+
 a_targ = soup.find_all('a')
 for l in a_targ:
     print(l['href'])
 
+#css
+a_targ = soup.find_all('a',{'class':'month'})
+for i in a_targ:
+    print(i.get_text())
