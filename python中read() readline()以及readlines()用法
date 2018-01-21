@@ -1,1 +1,13 @@
-https://www.cnblogs.com/qi09/archive/2012/02/10/2344964.html
+fh = open('c:\\autoexec.bat')
+for  line in  fh.readlines(): 
+  print  line
+  
+  
+.readline() 和 .readlines() 之间的差异是后者一次读取整个文件，象 .read() 一样。
+.readlines() 自动将文件内容分析成一个行的列表，该列表可以由 Python 的 for ... in ... 结构进行处理。
+另一方面，.readline() 每次只读取一行，通常比 .readlines() 慢得多。仅当没有足够内存可以一次读取整个文件时，才应该使用 .readline()。
+
+更快的方式，因为python2.5之后已经把文件设置为一种可以迭代的类型。所以这是最高效的方法了：
+f=open('data')
+for line in f:
+    process(line)
