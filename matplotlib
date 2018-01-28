@@ -160,3 +160,5 @@ ani = animation.FuncAnimation(fig=fig,func=animate,frames=100,init_func=init,int
 plt.show()
 
 
+#如果想打开新matplotlib窗口，在控制台输入：%matplotlib qt5   
+#备选参数: ['auto', 'gtk', 'gtk3', 'inline', 'nbagg', 'notebook', 'osx', 'qt', 'qt4', 'qt5', 'tk', 'wx']
