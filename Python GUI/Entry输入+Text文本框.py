@@ -4,7 +4,7 @@
 # In[12]:
 
 
-import tkinter as tk
+import tkinter as tk   #python2.7是import Tkinter as tk
 
 w = tk.Tk()
 w.title('my window')
